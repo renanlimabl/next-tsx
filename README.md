@@ -12,3 +12,4 @@
 * import dinamico [x]
 * lazy loading e ssr false for components with use feature that is using only browser. [x]
 * enviroment env [x]
+* component SEO for nextJS [x]
