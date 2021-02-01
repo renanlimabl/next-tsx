@@ -9,7 +9,7 @@ import { useState } from 'react';
  * Só vamos importar o componente qnd precisarmos dele.
  */
 const AddToCartModal = dynamic(
-  () => import('../../../components/AddToCartModal'),
+  () => import('@/components/AddToCartModal'),
   {
     loading: () => <p>Loading...</p>,
     // SSR FALSE DIZ QUE O COMPONENTE NUNCA SERÁ RENDERIZADO PELO LADO DO SERVIDOR, E SIM PELO BROWSER,
