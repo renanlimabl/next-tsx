@@ -10,3 +10,4 @@
 * page static with content static, using fallback and revalidate [x]
 * add page 404 [x]
 * import dinamico [x]
+* lazy loading e ssr false for components with use feature that is using only browser. [x]
