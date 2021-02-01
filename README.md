@@ -9,3 +9,4 @@
 * dinamic page static [x]
 * page static with content static, using fallback and revalidate [x]
 * add page 404 [x]
+* import dinamico [x]
