@@ -6,3 +6,5 @@
 * server fake com delay 2s [npx json-server server.json -p 3333 -w -d 2000] [x]
 * server side fetch [x]
 * static fetch [x]
+* dinamic page static [x]
+* page static with content static, using fallback and revalidate [x]
