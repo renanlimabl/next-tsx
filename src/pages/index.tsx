@@ -50,8 +50,14 @@ export default function Home({ recommendedProducts }: IHomeProps) {
   )
 }
 
+/**
+ * as variáveis de ambiente só ficarão disponíveis nos métodos de 
+ * // client, server, static
+ * A não ser que você utilize o prefixo NEXT_PUBLIC antes da sua variável de ambiente!
+ */
 export const getServerSideProps: GetServerSideProps<IHomeProps> = async () => {
-  const response = await fetch('http://localhost:3333/recommended');
+  // const response = await fetch(`${process.env.API_URL}/recommended`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/recommended`);
   const recommendedProducts = await response.json();
 
   return {
