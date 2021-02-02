@@ -1,15 +1,15 @@
 // import { useEffect, useState } from 'react';
 import SEO from '@/components/SEO';
 import { GetServerSideProps } from 'next';
+import Link from 'next/link';
 import { Title } from '../styles/pages/Home';
-
-interface IProduct {
-  id: string;
-  title: string;
-}
+import { client } from './lib/prismic';
+import Prismic from 'prismic-javascript';
+import PrismicDom from 'prismic-dom';
+import { Document } from 'prismic-javascript/types/documents';
 
 interface IHomeProps {
-  recommendedProducts: IProduct[];
+  recommendedProducts: Document[];
 }
 
 export default function Home({ recommendedProducts }: IHomeProps) {
@@ -40,12 +40,16 @@ export default function Home({ recommendedProducts }: IHomeProps) {
         image="boost.png"
       />
       <section>
-        <Title>Products</Title>
+        <Title> Products </Title>
         <ul>
-          {recommendedProducts.map(recommendedProduct => {
+          {recommendedProducts.map(recommendedProducts => {
             return (
-              <li key={recommendedProduct.id}>
-                {recommendedProduct.title}
+              <li key={recommendedProducts.id}>
+                <Link href={`/catalog/products/${recommendedProducts.uid}`}>
+                  <a>
+                    {PrismicDom.RichText.asText(recommendedProducts.data.title)}
+                  </a>
+                </Link>
               </li>
             )
           })}
@@ -62,12 +66,15 @@ export default function Home({ recommendedProducts }: IHomeProps) {
  */
 export const getServerSideProps: GetServerSideProps<IHomeProps> = async () => {
   // const response = await fetch(`${process.env.API_URL}/recommended`);
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/recommended`);
-  const recommendedProducts = await response.json();
+  // const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/recommended`);
+  // const recommendedProducts = await response.json();
+  const recommendedProducts = await client().query([
+    Prismic.Predicates.at('document.type', 'product')
+  ]);
 
   return {
     props: {
-      recommendedProducts
+      recommendedProducts: recommendedProducts.results
     }
   }
 }
