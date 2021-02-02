@@ -13,3 +13,4 @@
 * lazy loading e ssr false for components with use feature that is using only browser. [x]
 * enviroment env [x]
 * component SEO for nextJS [x]
+* customize HEAD, BODY, MAIN, AND SCRIPTS global in nextjs
