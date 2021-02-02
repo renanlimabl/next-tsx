@@ -23,14 +23,14 @@ export default function Home({ recommendedProducts }: IHomeProps) {
   //   })
   // }, [])
 
-  /**
-   * fazendo assim, essa lib só será importada de fato quando for necessária!
-   */
-  async function handleSum() {
-    const math = (await import('../lib/math')).default
+  // /**
+  //  * fazendo assim, essa lib só será importada de fato quando for necessária!
+  //  */
+  // async function handleSum() {
+  //   const math = (await import('../lib/math')).default
 
-    console.log(math.sum(3, 2));
-  }
+  //   console.log(math.sum(3, 2));
+  // }
 
   return (
     <div>
@@ -51,7 +51,6 @@ export default function Home({ recommendedProducts }: IHomeProps) {
           })}
         </ul>
       </section>
-      <button onClick={handleSum} >Sum!</button>
     </div>
   )
 }
