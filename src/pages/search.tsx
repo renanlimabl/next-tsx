@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react"
 import Prismic from 'prismic-javascript';
 import PrismicDOM from 'prismic-dom';
 import { GetServerSideProps } from "next";
-import { client } from "./lib/prismic";
+import { client } from "../lib/prismic";
 import { Document } from 'prismic-javascript/types/documents';
 
 interface SearchProps {

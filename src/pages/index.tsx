@@ -3,7 +3,7 @@ import SEO from '@/components/SEO';
 import { GetServerSideProps } from 'next';
 import Link from 'next/link';
 import { Title } from '../styles/pages/Home';
-import { client } from './lib/prismic';
+import { client } from '../lib/prismic';
 import Prismic from 'prismic-javascript';
 import PrismicDom from 'prismic-dom';
 import { Document } from 'prismic-javascript/types/documents';

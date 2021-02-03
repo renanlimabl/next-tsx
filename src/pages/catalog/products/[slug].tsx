@@ -1,4 +1,4 @@
-import { client } from '@/pages/lib/prismic';
+import { client } from '@/lib/prismic';
 import { useRouter } from 'next/router';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Prismic from 'prismic-javascript';
