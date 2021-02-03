@@ -1,3 +1,6 @@
+# This project is running here:
+[Click here](https://nextjs-zeta-lime-15.vercel.app/)
+
 # NextJS 
 * routes [x]
 * styled-components [x]
@@ -18,3 +21,4 @@
 * page categories dinamic [x]
 * page product dinamic [x]
 * add page search [x]
+* add deploy to vercel [x]
