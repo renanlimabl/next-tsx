@@ -17,3 +17,4 @@
 * consuming API prismic [x]
 * page categories dinamic [x]
 * page product dinamic [x]
+* add page search [x]
