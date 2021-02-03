@@ -16,3 +16,4 @@
 * customize HEAD, BODY, MAIN, AND SCRIPTS global in nextjs
 * consuming API prismic [x]
 * page categories dinamic [x]
+* page product dinamic [x]
