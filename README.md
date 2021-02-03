@@ -14,4 +14,5 @@
 * enviroment env [x]
 * component SEO for nextJS [x]
 * customize HEAD, BODY, MAIN, AND SCRIPTS global in nextjs
-* consuming API prismic
+* consuming API prismic [x]
+* page categories dinamic [x]
